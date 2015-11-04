@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>方法和事件处理 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - 直观的、高效的和可组合的用于构建交互界面的MVVM类库">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+            Guide
+            <select class="version-select">
+                <option selected>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">即可开始</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">概览</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue 实例</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">数据绑定语法</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">计算的属性</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">类和样式绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">列表渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link current">方法和事件处理</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">表单输入的绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">转场过渡效果</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">Components</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">Custom Filters</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">Mixins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">Building Large-Scale Apps</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>方法和事件处理</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <h2 id="方法处理">方法处理</h2><p>我们可以使用<code>v-on</code>指令监听DOM事件：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"greet"</span>&gt;</span>Greet<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们刚刚绑定了一个叫<code>greet</code>的点击事件。这里展示了如何在Vue实例里定义这样的方法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    name: <span class="string">'Vue.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// define methods under the `methods` object</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    greet: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// `this` inside methods point to the Vue instance</span></span><br><span class="line">      alert(<span class="string">'Hello '</span> + <span class="keyword">this</span>.name + <span class="string">'!'</span>)</span><br><span class="line">      <span class="comment">// `event` is the native DOM event</span></span><br><span class="line">      alert(event.target.tagName)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 你可以可以在JavaScript里调用这些方法</span></span><br><span class="line">vm.greet() <span class="comment">// -&gt; 'Hello Vue.js!'</span></span><br></pre></td></tr></table></figure>
+<p>你自己可以尝试一下：</p>
+
+<div id="example" class="demo">
+  <button v-on:click="greet">Greet</button>
+</div>
+<script>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    name: 'Vue.js'
+  },
+  // define methods under the `methods` object
+  methods: {
+    greet: function (event) {
+      // `this` inside methods point to the vm
+      alert('Hello ' + this.name + '!')
+      // `event` is the native DOM event
+      alert(event.target.tagName)
+    }
+  }
+})
+</script>
+
+<h2 id="行内声明处理">行内声明处理</h2><p>除了可以直接绑定一个方法名称，我们也可以使用行内的JavaScript声明：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example-2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"say('hi')"</span>&gt;</span>Say Hi<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"say('what')"</span>&gt;</span>Say What<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-2'</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    say: <span class="function"><span class="keyword">function</span> (<span class="params">msg</span>) </span>&#123;</span><br><span class="line">      alert(msg)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>运行结果：<br>
+<div id="example-2" class="demo">
+  <button v-on:click="say('hi')">Say Hi</button>
+  <button v-on:click="say('what')">Say What</button>
+</div>
+<script>
+new Vue({
+  el: '#example-2',
+  methods: {
+    say: function (msg) {
+      alert(msg)
+    }
+  }
+})
+</script>
+</p>
+<p>跟行内表达式的限制策略类似，事件处理也被限制在<strong>只能用一条声明语句</strong>。</p>
+<p>有时我们需要在行内声明处理中访问DOM事件源。你可以传入这个特殊的变量获得<code>$event</code>：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">v-on:click</span>=<span class="value">"say('hello!', $event)"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">methods: &#123;</span><br><span class="line">  say: <span class="function"><span class="keyword">function</span> (<span class="params">msg, event</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// now we have access to the native event</span></span><br><span class="line">    event.preventDefault()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="事件修改器">事件修改器</h2><p>在事件处理内部我们会经常需要调用<code>event.preventDefault()</code>或<code>event.stopPropagation()</code>。尽管我们在方法内部可以很方便的这么做，但是如果方法可以很单纯的处理数据逻辑而不需要处理事件细节的话，那么会更好。</p>
+<p>为解决这个问题，Vue.js给<code>v-on</code>提供了2个<strong>事件修改器</strong><code>.prevent</code>和<code>.stop</code>。直接在事件类型后面添加点和修改器就可以：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- the click event's propagation will be stopped --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-on:click.stop</span>=<span class="value">"doThis"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- the submit event will no longer reload the page --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">v-on:submit.prevent</span>=<span class="value">"onSubmit"</span>&gt;</span><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- modifiers can be chained --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">v-on:click.stop.prevent</span>=<span class="value">"doThat"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- just the modifier --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="键盘事件修改器">键盘事件修改器</h2><p>当我们监听键盘事件的时候，我们经常需要知道键位码。Vue.js也允许我们在<code>v-on</code>上添加键盘事件修改器：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- only call vm.submit() when the keyCode is 13 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-on:keyup.13</span>=<span class="value">"submit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>记住键盘码是一个很麻烦的事情，因此Vue.js也提供了常用键位的名称别名：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- same as above --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">v-on:keyup.enter</span>=<span class="value">"submit"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- also works for shorthand --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">input</span> @<span class="attribute">keyup.enter</span>=<span class="value">"submit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这里是所有键码别名表：</p>
+<ul>
+<li>enter</li>
+<li>tab</li>
+<li>delete</li>
+<li>esc</li>
+<li>space</li>
+<li>up</li>
+<li>down</li>
+<li>left</li>
+<li>right</li>
+</ul>
+<h2 id="为什么在HTML书写监听器">为什么在HTML书写监听器</h2><p>You might be concerned that this whole event listening approach violates the good old rules about “separation of concern”. Rest assured - since all Vue.js handler functions and expressions are strictly bound to the ViewModel that’s handling the current View, it won’t cause any maintenance difficulty. In fact, there are several benefits in using <code>v-on</code>:</p>
+<p>你可能担心这种事件监听方法违法了旧的好的原则“关注点分离”。确实—因为所有的Vue.js处理方法和表达式是绑定在处理当前视图的视图模型的，这不会引起维护困难。事实上，使用<code>v-on</code>会有这么几个好处：</p>
+<ol>
+<li><p>在模板中通过简单的浏览代码就可以很容易的定位到处理函数。</p>
+</li>
+<li><p>因为你不需要手动的添加事件监听器到JS中，你的视图模型就会是单纯的逻辑和DOM自由，这会很容易测试。</p>
+</li>
+<li><p>当一个视图模型被销毁，所有绑定在这个视图上的事件也会自动的被移除。你不需要自己去清除。</p>
+</li>
+</ol>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/list.html">列表渲染</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/forms.html">表单输入的绑定</a> →</span>
+        
+      </div>
+    
+    <div class="footer">发现一个错误还是想贡献文档？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">在Github上拉出一个分支吧</a>!</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>计算的属性 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - 直观的、高效的和可组合的用于构建交互界面的MVVM类库">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+            Guide
+            <select class="version-select">
+                <option selected>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">即可开始</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">概览</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue 实例</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">数据绑定语法</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link current">计算的属性</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">类和样式绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">列表渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">方法和事件处理</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">表单输入的绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">转场过渡效果</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">Components</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">Custom Filters</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">Mixins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">Building Large-Scale Apps</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>计算的属性</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <p>内置的模板表达式还是很方便的，但是他们只被用于简单操作。模板本来是用来描述视图的结构的。放入太多的逻辑，会让你的模板变的很臃肿和难以维护。这就是为什么Vue.js限制绑定表达式只能一个表达式。如果出现了超过一个逻辑的表达式，你需要用到<strong>计算的属性</strong>。</p>
+<h3 id="基本的例子">基本的例子</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span>&gt;</span></span><br><span class="line">  a=&#123;&#123; a &#125;&#125;, b=&#123;&#123; b &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="comment">// a computed getter</span></span><br><span class="line">    b: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// `this` points to the vm instance</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a + <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+
+<div id="example" class="demo">
+  a={{ a }}, b={{ b }}
+</div>
+<script>
+var vm = new Vue({
+  el: '#example',
+  data: {
+    a: 1
+  },
+  computed: {
+    b: function () {
+      return this.a + 1
+    }
+  }
+})
+</script>
+
+<p>这里我们声明了一个计算的属性<code>b</code>。我们提供的方法被用来作为<code>vm.b</code>属性的getter方法。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(vm.b) <span class="comment">// -&gt; 2</span></span><br><span class="line">vm.a = <span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(vm.b) <span class="comment">// -&gt; 3</span></span><br></pre></td></tr></table></figure>
+<p>你可以打开控制台，自己把玩一下这个例子。<code>vm.b</code>的值总是依赖<code>vm.a</code>这个值。</p>
+<p>在模板中你只需要像正常的属性一样绑定计算的属性就行。Vue意识到<code>vm.b</code>依赖<code>vm.a</code>，那么它就会在<code>vm.a</code>发生变化的时候同步更新<code>vm.b</code>。最重要的地方在于，我们已经声明的创建了他们之间的依赖关系：计算的getter方法很纯粹，没有负面效果产生，这会更容易测试和推到错误原因。</p>
+<h3 id="计算的属性_vs-_$watch">计算的属性 vs. $watch</h3><p>Vue.js确实提供了一个API方法叫<code>$watch</code>，允许你在Vue对象中监听数据的变化。当你有一些数据的会依赖另外一些数据的变化，你很可能想用<code>$watch</code> — 尤其是你有AngularJS使用背景。然而，使用计算的属性好过武断的使用<code>$watch</code>回调，思考下这个例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"demo"</span>&gt;</span>&#123;&#123;fullName&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Foo'</span>,</span><br><span class="line">    lastName: <span class="string">'Bar'</span>,</span><br><span class="line">    fullName: <span class="string">'Foo Bar'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$watch(<span class="string">'firstName'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.fullName = val + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.$watch(<span class="string">'lastName'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.fullName = <span class="keyword">this</span>.firstName + <span class="string">' '</span> + val</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>上面的代码很随意也很重复。跟计算的属性版本比较一下看看：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Foo'</span>,</span><br><span class="line">    lastName: <span class="string">'Bar'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    fullName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>不是更好么？</p>
+<h3 id="计算的Setter">计算的Setter</h3><p>计算的属性默认是只有Getter方法的，但是当你需要的时候，也提供了Setter方法：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">computed: &#123;</span><br><span class="line">  fullName: &#123;</span><br><span class="line">    <span class="comment">// getter</span></span><br><span class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">' '</span> + <span class="keyword">this</span>.lastName</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// setter</span></span><br><span class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> names = newValue.split(<span class="string">' '</span>)</span><br><span class="line">      <span class="keyword">this</span>.firstName = names[<span class="number">0</span>]</span><br><span class="line">      <span class="keyword">this</span>.lastName = names[names.length - <span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<p>现在当你执行<code>vm.fullName = &#39;John Doe&#39;</code>，这个Setter方法会被执行<code>vm.firstName</code>和<code>vm.lastName</code>相应的会被更新。</p>
+<p>计算的属性是如何更新的背后的技术细节会在<a href="(reactivity.html#Inside_Computed_Properties">另一篇文章中继续讨论</a>。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/syntax.html">数据绑定语法</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/class-and-style.html">类和样式绑定</a> →</span>
+        
+      </div>
+    
+    <div class="footer">发现一个错误还是想贡献文档？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">在Github上拉出一个分支吧</a>!</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

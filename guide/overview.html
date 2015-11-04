@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>概览 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - 直观的、高效的和可组合的用于构建交互界面的MVVM类库">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+            Guide
+            <select class="version-select">
+                <option selected>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">即可开始</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link current">概览</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue 实例</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">数据绑定语法</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">计算的属性</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link">类和样式绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">列表渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">方法和事件处理</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">表单输入的绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">转场过渡效果</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">Components</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">Custom Filters</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">Mixins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">Building Large-Scale Apps</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>概览</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <p>Vue.js (音标发音 /vjuː/, 同 <strong>view</strong>) 是一个用于创建Web交互的类库。Vue.js的目标是提供<strong><em>动态数据绑定</em></strong>和<strong><em>可组合的视觉控件</em></strong>的便利性并且具有尽可能简单的API。</p>
+<p>Vue.js不是一个大型的框架，它只是专注在视觉层面而已。它很容易学会也容易跟其他类库整合使用，也方便用在已有的项目上。换句话说，当它结合其他合适的工具或者类库，Vue.js可以创建很完美的单页面应用程序。</p>
+<p>如果你是一名有经验的前端开发者，想知道Vue.js跟其他类库/框架有什么不同，查看<a href="comparsion.html">跟其他类库的比较</a>；如果你想知道Vue.js是如来搭建大型应用程序的，查看<a href="application.html">创建大型应用程序</a>。</p>
+<h2 id="动态数据绑定">动态数据绑定</h2><p>Vue.js的核心功能就是动态数据绑定，它使你的程序可以很简单的做到数据和DOM同步。当我们使用jQuery操作DOM的时候，我们写的代码总是很武断，很多重复代码，也很容易出现错误。Vue.js却以<strong>数据驱动视图</strong>为核心。简单来说，我们在正常的HTML模板里写一些特殊的语法，就会把DOM绑定到对应的数据上。一旦绑定关系建立，DOM就会跟数据保持同步。当我们修改数据，DOM也会相应的更新。这样一来，多数的程序逻辑就直接转变成了操作数据就可以了，而不用围绕着DOM做各种混乱的更新了。这回让我们的代码更容易书写，也容易定位问题，变得容易维护。</p>
+<p><img src="/images/mvvm.png" alt="MVVM"></p>
+<p>最简单的例子可能是这样的：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- this is our View --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example-1"</span>&gt;</span></span><br><span class="line">  Hello &#123;&#123; name &#125;&#125;!</span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这是我们的数据模型</span></span><br><span class="line"><span class="keyword">var</span> exampleData = &#123;</span><br><span class="line">  name: <span class="string">'Vue.js'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个Vue实例对象，或者说，一个“视图模型”</span></span><br><span class="line"><span class="comment">// 哪个关联视图和数据模型</span></span><br><span class="line"><span class="keyword">var</span> exampleVM = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-1'</span>,</span><br><span class="line">  data: exampleData</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>结果：<br>
+<div id="example-1" class="demo">Hello {{ name }}!</div>
+<script>
+var exampleData = {
+  name: 'Vue.js'
+}
+var exampleVM = new Vue({
+  el: '#example-1',
+  data: exampleData
+})
+</script>
+</p>
+<p>这看起来非常像渲染一个模板而已，但是Vue.js缺在背后做了大量的钩子事件。现在数据和DOM已经建立了连接，任何的东西都变成了<strong>动态</strong>的了。我们是怎么知道的呢？你只需要打开你的浏览器开发工具控制台，修改<code>exampleDate.name</code>，你就会看到渲染的例子也相应的更新了。</p>
+<p>需要注意的是，我们不需要写任何的DOM操作的代码：只是HTML模板，已经增加了绑定，也是数据的映射地图，数据也不过是纯文本的Javascript对象。我们的整个视图都是数据驱动的。</p>
+<p>让我们来看第二个列子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example-2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">p</span> <span class="attribute">v-if</span>=<span class="value">"greeting"</span>&gt;</span>Hello!<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> exampleVM2 = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#example-2'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    greeting: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<div id="example-2" class="demo">
+  <span v-if="greeting">Hello!</span>
+</div>
+<script>
+var exampleVM2 = new Vue({
+  el: '#example-2',
+  data: {
+    greeting: true
+  }
+})
+</script>
+
+<p>这里我们发现了一些新的变化，<code>v-if</code>属性我们称之为<strong>指令</strong>。指令前面都是以<code>v-</code>开头，用来告知我们这是Vue.js提供的特殊属性，你应该也会想到，这些指令会在渲染DOM的时候产生相应的效果。你如果在控制台里把<code>exampleVM2.greeting</code>设置为<code>false</code>，你会发现“Hello”信息消失了。</p>
+<p>通过第二个例子的展示，我们发现Vue.js不仅可以绑定DOM的文本到数据上，可以绑定DOM的<code>结构</code>到数据上。除此之外，Vue.js也提供了强大的动画效果，当一个元素被插入/删除的时候。</p>
+<p>也存在一些其他的指令，每个指令都有其独特的功能。比如<code>v-for</code>指令用来列举数组里的元素，又或者<code>v-bind</code>指令用来绑定HTML属性。我们将在后续讨论所有的数据绑定语法。</p>
+<h2 id="组件系统">组件系统</h2><p>组件系统是Vue.js另一个重要的概念，因为它是一个抽象的，能够让我们创建大型应用的，由小的、字包含的、经常复用的组件组成。如果我们这么想，几乎任何一种应用程序界面都会被抽象成这个组件系统树里的一片叶子。</p>
+<p><img src="/images/components.png" alt="组件树"></p>
+<p>事实上，一个典型的通过Vue.js构建的大型应用程序，都是一颗组件树。我们将在后面的教程中大量讲述组件，但是我们这里先看(想象)一个例子，应用的目标在组件里是怎样的：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">app-nav</span>&gt;</span><span class="tag">&lt;/<span class="title">app-nav</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">app-view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">app-sidebar</span>&gt;</span><span class="tag">&lt;/<span class="title">app-sidebar</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">app-content</span>&gt;</span><span class="tag">&lt;/<span class="title">app-content</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">app-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>你可能注意到了，Vue.js组件很像<strong>自定义元素</strong>，也是<a href="http://www.w3.org/wiki/WebComponents/" target="_blank" rel="external">Web组件规范</a>的一部分。事实上，Vue.js组件语法宽松的模仿了规范。比如，Vue组件实现了<a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Slots-Proposal.md" target="_blank" rel="external">Slot API</a>和<code>is</code>规范属性。当然，也有一些很关键的不同点：</p>
+<ol>
+<li><p>Web组件规范仍然有很多进程中的工作，并没有在所有浏览器中原声支持。相比之下，Vue.js组件不需要任何的打补丁兼容就可以在所支持的浏览器中(IE9及以上)执行的很好。如果需要，Vue.js组件也可以被包裹进原声自定义元素里。</p>
+</li>
+<li><p>Vue.js组件提供重要的特性，是纯自定义元素所不支持的，非常明显的跨组件数据流，自定义事件通信和动态组件切换过渡效果。</p>
+</li>
+</ol>
+<p>组件系统是通过Vue.js构建大型程序的基础。再就是，Vue.js生态系统也提供了先进的工具和多种类库支持，他们一起可以创建比“框架”更大的所谓的系统了。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/index.html">即可开始</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/instance.html">Vue 实例</a> →</span>
+        
+      </div>
+    
+    <div class="footer">发现一个错误还是想贡献文档？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">在Github上拉出一个分支吧</a>!</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>

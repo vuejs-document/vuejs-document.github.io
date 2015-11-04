@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>类和样式绑定 - vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Vue.js - 直观的、高效的和可组合的用于构建交互界面的MVVM类库">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,500&text=Vue.js' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="/images/logo.png" type="image/x-icon">
+        <script>
+            window.PAGE_TYPE = "guide"
+        </script>
+        <link rel="stylesheet" href="/css/page.css" type="text/css">
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46852172-1', 'vuejs.org');
+  ga('send', 'pageview');
+</script>
+        <script src="/js/vue.js"></script>
+    </head>
+    <body>
+        <div id="mobile-bar">
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        
+            <div id="header">
+    <a id="logo" href="/">
+        <img src="/images/logo.png">
+        <span>Vue.js</span>
+    </a>
+    <ul id="nav">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+</div>
+            <div id="main">
+                
+                    
+    <div class="sidebar">
+    <ul class="main-menu">
+        <li>
+  <form id="search-form">
+    <input type="text" id="search-query" class="st-default-search-input">
+  </form>
+</li>
+<li><a href="/guide/" class="nav-link current">教程</a></li>
+<li><a href="/api/" class="nav-link">API</a></li>
+<li><a href="/examples/" class="nav-link">示例</a></li>
+<li><a href="/blog/" class="nav-link">Blog</a></li>
+<li class="nav-dropdown-container">
+  <a class="nav-link">Community</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="https://github.com/vuejs/vue" class="nav-link" target="_blank">GitHub</a></li>
+    <li><a href="http://forum.vuejs.org" class="nav-link" target="_blank">论坛</a></li>
+    <li><a href="https://gitter.im/vuejs/vue" class="nav-link" target="_blank">聊天</a></li>
+    <li><a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a></li>
+  </ul>
+</li>
+
+
+    </ul>
+    <div class="list">
+        <h2>
+            Guide
+            <select class="version-select">
+                <option selected>1.0</option>
+                <option>0.12</option>
+                <option>0.11</option>
+            </select>
+        </h2>
+        <ul class="menu-root">
+            
+                <li>
+                    <a href="/guide/installation.html" class="sidebar-link">安装</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/index.html" class="sidebar-link">即可开始</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/overview.html" class="sidebar-link">概览</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/instance.html" class="sidebar-link">Vue 实例</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/syntax.html" class="sidebar-link">数据绑定语法</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/computed.html" class="sidebar-link">计算的属性</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/class-and-style.html" class="sidebar-link current">类和样式绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/conditional.html" class="sidebar-link">条件渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/list.html" class="sidebar-link">列表渲染</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/events.html" class="sidebar-link">方法和事件处理</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/forms.html" class="sidebar-link">表单输入的绑定</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/transitions.html" class="sidebar-link">转场过渡效果</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/components.html" class="sidebar-link">Components</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/reactivity.html" class="sidebar-link">Reactivity in Depth</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-directive.html" class="sidebar-link">Custom Directives</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/custom-filter.html" class="sidebar-link">Custom Filters</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/mixins.html" class="sidebar-link">Mixins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/plugins.html" class="sidebar-link">Plugins</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/application.html" class="sidebar-link">Building Large-Scale Apps</a>
+                </li>
+            
+                <li>
+                    <a href="/guide/comparison.html" class="sidebar-link">Comparison with Other Frameworks</a>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar">
+    <h1>类和样式绑定</h1>
+    <div id="ad">
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+    </div>
+    <p>一种常见的数据绑定需求就是操作一个元素的类列表和它的行内样式。因为他们都是属性，所以我们可以使用<code>v-bind</code>来处理：我们只需要用我们的表达式计算一个最终的字符串就可以了。然而瞎弄字符串的连接是无聊和容易出错的事情。处于这个原因，当使用<code>v-bind</code>处理<code>class</code>和<code>style</code>的时候，Vue.js在这方面做了加强。除了字符之外，表达式可以计算数组和对象了。</p>
+<h2 id="绑定HTML样式类">绑定HTML样式类</h2><h3 id="对象配置语法">对象配置语法</h3><p>我们可以传递一个对象给<code>v-bind:class</code>来动态的切换class。注意<code>v-bind:class</code>指令可以跟元素上的<code>class</code>属性并存出现。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"static"</span> <span class="attribute">v-bind:class</span>=<span class="value">"&#123; 'class-a': isA, 'class-b': isB &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  isA: <span class="literal">true</span>,</span><br><span class="line">  isB: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>渲染的结果将会是：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"static class-a"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当 <code>isA</code> 和 <code>isB</code> 改变的时候，class列表也会相应的更新。比如，如果 <code>isB</code> 变成 <code>true</code>，class列表将会变成 <code>&quot;class-a class-b&quot;</code>。</p>
+<p>你也可以直接绑定一个对象到data上：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:class</span>=<span class="value">"classObject"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  classObject: &#123;</span><br><span class="line">    <span class="string">'class-a'</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">'class-b'</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这也会渲染出相同的结果。你可能也注意到了，我们也可以绑定返回对象结果的<a href="computed.html">计算的属性</a>。这是很常见和很强大的模式。</p>
+<h3 id="数组配置语法">数组配置语法</h3><p>我们可以传递一个数组给<code>v-bind:class</code>来实现一个class列表：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:class</span>=<span class="value">"[classA, classB]"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  classA: <span class="string">'class-a'</span>,</span><br><span class="line">  classB: <span class="string">'class-b'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>渲染的结果将会是：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"class-a class-b"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果你希望根据条件切换不同的class，你可以使用一个三目表达式：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:class</span>=<span class="value">"[classA, isB ? classB : '']"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这个元素上始终会有<code>classA</code>，但只有当<code>isB</code>是<code>true</code>的时候才会出现<code>classB</code>。</p>
+<h2 id="绑定行内样式">绑定行内样式</h2><h3 id="对象配置语法-1">对象配置语法</h3><p><code>v-bind:style</code>对象配置语法是很直白的 — 这看起来非常像CSS，尽管它是JavaScript对象。你可以使用驼峰写法属性，也可以使用烤串写法属性：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:style</span>=<span class="value">"&#123; color: activeColor, fontSize: fontSize + 'px' &#125;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  activeColor: <span class="string">'red'</span>,</span><br><span class="line">  fontSize: <span class="number">30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这也常常是一个好的主意直接绑定一个对象配置到模板上，这也模板看起来也很整洁。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:style</span>=<span class="value">"styleObject"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">  styleObject: &#123;</span><br><span class="line">    color: <span class="string">'red'</span>,</span><br><span class="line">    fontSize: <span class="string">'13px'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再就是，对象配置语法经常跟返回对象的计算的属性一起使用。</p>
+<h3 id="数组配置语法-1">数组配置语法</h3><p><code>v-bind:style</code>的数组配置语法允许你应用多个样式对象到同一个元素上：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">v-bind:style</span>=<span class="value">"[styleObjectA, styleObjectB]"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="自动添加前缀">自动添加前缀</h3><p>当你在<code>v-bind:style</code>使用一个CSS属性需要冠以浏览器前缀的时候，比如<code>transform</code>，Vue.js会自动探测和添加合适的前缀。</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/guide/computed.html">计算的属性</a></span>
+        
+        
+          <span style="float:right"><a href="/guide/conditional.html">条件渲染</a> →</span>
+        
+      </div>
+    
+    <div class="footer">发现一个错误还是想贡献文档？ <a href="https://github.com/vuejs/vuejs.org" target="_blank">在Github上拉出一个分支吧</a>!</div>
+</div>
+
+                
+            </div>
+            <script src="/js/smooth-scroll.min.js"></script>
+            <script src="/js/common.js"></script>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        </script>
+    </body>
+</html>
